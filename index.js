@@ -51,17 +51,24 @@
       updateDisplay(totalSeconds);
     }
 
-    // Quotes
-    const quotes = [
-      "The best time to start was yesterday. The next best time is now.",
-      "Push yourself, because no one else is going to do it for you.",
-      "Success doesn't come to you. You go to it.",
-      "Dream big. Work hard. Stay focused.",
-      "Your only limit is your mind.",
-      "Every second counts. Use it wisely."
-    ];
-    const quoteDiv = document.getElementById('quote');
-    document.getElementById('new-quote').addEventListener('click', () => {
-      const idx = Math.floor(Math.random() * quotes.length);
-      quoteDiv.textContent = quotes[idx];
-    });
+   const quotes = [
+  "समय की कदर करो, वह दोबारा नहीं आता।",
+  "जो लोग समय को बर्बाद करते हैं, समय उन्हें बर्बाद कर देता है।",
+  "हर सेकंड कुछ बड़ा करने का अवसर है।",
+  "जब तुम थक जाओ तो याद करो तुम क्यों शुरू किए थे।",
+  "कड़ी मेहनत का कोई विकल्प नहीं होता।",
+  "सपने वो नहीं जो नींद में आए, सपने वो हैं जो नींद नहीं आने दें।"
+];
+
+const quoteDiv = document.getElementById('quote');
+
+function showRandomQuote() {
+  const idx = Math.floor(Math.random() * quotes.length);
+  quoteDiv.textContent = quotes[idx];
+}
+
+
+showRandomQuote();
+
+
+setInterval(showRandomQuote, 4000);
