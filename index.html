@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer With Quotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+     <h1>Countdown Timer</h1>
+
+  <div class="container">
+    <input type="number" id="minutes-input" placeholder="Minutes" min="0">
+    <input type="number" id="seconds-input" placeholder="Seconds" min="0" max="59">
+
+    <div id="time-display">00:00</div>
+
+    <input type="button" onclick="startTimer()" value="Start">
+    <input type="button" onclick="stopTimer()" value="Stop">
+    <input type="button" onclick="resetTimer()" value="Reset">
+  </div>
+   <div class="section" id="quotes-section">
+    <h2>Random Quote</h2>
+    <div id="quote">Click “New Quote” to get inspired!</div>
+    <button id="new-quote">New Quote</button>
+  </div>
+</body>
+</html>
